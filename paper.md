@@ -1,5 +1,5 @@
 ---
-title: 'MPA: An accessible cross-language implementation of the Matrix Profile'
+title: 'MPA: An accessible and robust cross-language implementation of the Matrix Profile'
 tags:
   - Python
   - R
@@ -27,8 +27,9 @@ bibliography: paper.bib
 ---
 
 # Summary
+Two fundamental time-series tasks are identifying anomalous events (“discords”) and repeated patterns (“motifs”). Understanding how to accomplish these tasks is of the utmost importance across a myriad of disciplines, where accurate solutions can generate millions of dollars in profit, prevent catastrophic system failures or unlock novel technological abilities. While there are dozens of existing approaches for finding motifs and discords, they are nearly all limited by a steep learning curve, have numerous parameters that require tuning or scale poorly when applied to large datasets. These challenges have been compounded by the explosive growth of the data science community, where more practitioners possess backgrounds lacking advanced mathematical and statistical experience. Thus, there is a need for a more approachable solution to this question (note: finish this statement of need).
 
-Identifying anomalous events (or “discords”) and repeated patterns (“motifs”) are two fundamental time series tasks. There are dozens of existing approaches to both questions, each with unique positives and drawbacks. However, time series data is notoriously hard to analyze, and the explosive growth of the data science community has led to a need for more “black-box” automated solutions that can be leveraged by developers with a wide range of technical backgrounds. The Matrix Profile (a data structure & set of associated algorithms developed by the Keogh research group at UC-Riverside) is a powerful tool to help solve this dual problem of anomaly detection and motif discovery, as Matrix Profile is robust, scalable, and largely parameter-free.
+The Matrix Profile (a data structure & set of associated algorithms developed by the Keogh research group at UC-Riverside) is a powerful tool to help solve this dual problem of anomaly detection and motif discovery, as Matrix Profile is robust, scalable, and largely parameter-free.
 
 Although the Matrix Profile can be a game-changer for time series analysis, leveraging it to produce insights is a multi-step computational process, where each step requires some level of domain experience. There are three facets that will make this code accessibile to the broader community: “out-of-the-box” working implementations, gentle introductions to core concepts that can naturally lead into deeper exploration, and multi-language accessibility.
 
