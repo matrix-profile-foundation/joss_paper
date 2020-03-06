@@ -1,5 +1,5 @@
 ---
-title: 'MPA: An accessible and robust cross-language implementation of the Matrix Profile'
+title: 'MPA: An accessible and robust cross-language Matrix Profile platform'
 tags:
   - Python
   - R
@@ -27,9 +27,15 @@ bibliography: paper.bib
 ---
 
 # Summary
-Two fundamental time-series tasks are identifying anomalous events (“discords”) and repeated patterns (“motifs”). Understanding how to accomplish these tasks is of the utmost importance across a myriad of disciplines, where accurate solutions can generate millions of dollars in profit, prevent catastrophic system failures or unlock novel technological abilities. While there are dozens of existing approaches for finding motifs and discords, they are nearly all limited by one of the following: a steep learning curve, have numerous parameters that require tuning or scale poorly when applied to large datasets. These challenges have been compounded by the explosive growth of the data science community, where more practitioners possess backgrounds lacking advanced mathematical and statistical experience. Thus, there is a need for a more approachable solution to this question (note: finish this statement of need).
 
-The Matrix Profile (a data structure & set of associated algorithms developed by the Keogh research group at UC-Riverside) is a powerful tool to help solve this dual problem of anomaly detection and motif discovery, as Matrix Profile is robust, scalable, and largely parameter-free.
+Two fundamental tasks in time-series analysis are identifying anomalous events (“discords”) and repeated patterns (“motifs”). Successfully accomplishing these tasks is of the utmost importance across many disciplines, and can lead to powerful technological advancements, prevention of catastrophic failures and the generation of significant economic gain. While there are dozens of existing approaches for finding motifs and discords, they are hampered by a combination of steep methodological learning curves, numerous parameters to tune and lack of scale across large datasets. The explosive growth of the data science community provides a parallel challenge for traditional time series analysis methods, as many practitioners lack experience in requisite mathematical and statistical principles.
+
+The Matrix Profile is a novel data transformation and set of associated algorithms that provides a revolutionary solution to this dual problem of anomaly detection and motif discovery. The Matrix Profile takes snippets of my data and slide it along the rest of the time series, how well does it overlap at each new position? More specifically, we can evaluate the Euclidean distance between a subsequence and every possible time series segment of the same length, building up what’s known as the snippet’s “Distance Profile.”
+
+If the subsequence repeats itself in the data, there will be at least one perfect match and the minimum Euclidean distance will be zero (or close to zero in the presence of noise). In contrast, if the subsequence is highly unique (say it contains a significant outlier), matches will be poor and all overlap scores will be high. Note that the type of data is irrelevant: We’re only looking at general pattern conservation.
+
+We then slide every possible snippet across the time series, building up a collection of Distance Profiles. By taking the minimum value for each time step across all distance profiles, we can build the final Matrix Profile. Notice that both ends of the Matrix Profile value spectrum are useful. High values indicate uncommon patterns or anomalous events; in contrast, low values highlight repeatable motifs and provide valuable insight into your time series of interest.
+
 
 Although the Matrix Profile can be a game-changer for time series analysis, leveraging it to produce insights is a multi-step computational process, where each step requires some level of domain experience. There are three facets that will make this code accessibile to the broader community: “out-of-the-box” working implementations, gentle introductions to core concepts that can naturally lead into deeper exploration, and multi-language accessibility.
 
