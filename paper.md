@@ -32,13 +32,13 @@ Two fundamental tasks in time-series analysis are identifying anomalous events (
 
 The intuition behind Matrix Profile is straightforward. It begins with a snippet of data and then slides it along the rest of the time series, calculating the overlap at each new position. More specifically, it evaluates the Euclidean distance between a subsequence and every possible time series segment of the same length, building up the snippet’s “Distance Profile.” If the subsequence repeats itself in the data, there will be at least one perfect match and the minimum Euclidean distance will be zero, or close to zero in the presence of noise. In contrast, if the subsequence is highly unique due to the presence of outliers, matches will be poor and all overlap scores will be high. Every possible snippet is slid across the time series, building up a collection of Distance Profiles. The minimum value for each time step across all distance profiles is collected, creating the time series' final Matrix Profile. Both ends of the Matrix Profile value spectrum are useful. High values indicate uncommon patterns or anomalous events; in contrast, low values highlight repeatable motifs.
 
-![Figure 1. Overview of the Matrix Profile.\label{fig:example0}](mp_overview_paper.png)
+![Overview of the Matrix Profile.\label{fig:example0}](mp_overview_paper.png)
 
 The Matrix Profile scales extremely well when applied to large datasets, as demonstrated in several recent publications `[@Zhu:2017]`,`[@Gharghabi:2018]`. Its usage requires the selection of only a single parameter _k_, which is the length of the subsequence for which Euclidean distances are calculated. The recent formulation of the pan-Matrix Profile `[@Madrid:2019]` simplifies this result even further,  as it creates a global calculation of all possible subsequence lengths condensed into a single visual summary (*Figure 2*). The X-axis is the index of the matrix profile, and the Y-axis is the corresponding subsequence length. The darker the shade, the lower the Euclidean distance at that point. Thus, the pan-Matrix Profile enables truly naive exploration of any time series, which can then be examined in more detail for greater understanding.
 
-![Figure 2a. A synthetic time series.\label{fig:example1}](synthetic_time_series.jpg)
+![A synthetic time series.\label{fig:example1}](synthetic_time_series.jpg)
 
-![Figure 2b. The pan-Matrix Profile of the time series in 2a.\label{fig:example2}](pan_mp.png)
+![The pan-Matrix Profile of the time series in Figure 2.\label{fig:example2}](pan_mp.png)
 
 Although the Matrix Profile can be a game-changer for time series analysis, leveraging it to produce insights is a multi-step computational process, where each step requires some level of domain experience. MPA resolves this challenge through three unique facets: an “out-of-the-box” working implementation, gentle introductions to core concepts that naturally lead into deeper exploration, and multi-language accessibility. 
 
