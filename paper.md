@@ -36,7 +36,7 @@ The intuition behind Matrix Profile is straightforward. It begins with a snippet
 
 The Matrix Profile scales extremely well when applied to large datasets, as demonstrated in several recent publications `[@Zhu:2017]`,`[@Gharghabi:2018]`. Its usage requires the selection of only a single parameter _k_, which is the length of the subsequence for which Euclidean distances are calculated. The recent formulation of the pan-Matrix Profile `[@Madrid:2019]` simplifies this result even further,  as it creates a global calculation of all possible subsequence lengths condensed into a single visual summary (*Figure 2*). The X-axis is the index of the matrix profile, and the Y-axis is the corresponding subsequence length. The darker the shade, the lower the Euclidean distance at that point. Thus, the pan-Matrix Profile enables truly naive exploration of any time series, which can then be examined in more detail for greater understanding.
 
-![Figure 2a. A synthetic time series](synthetic_time_series.png)
+![Figure 2a. A synthetic time series](synthetic_time_series.jpg)
 
 ![Figure 2b. The pan-Matrix Profile of the time series in 2a](pan_mp.png)
 
