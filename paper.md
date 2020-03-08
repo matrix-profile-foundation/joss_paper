@@ -14,8 +14,8 @@ authors:
   - name: Austin Ouyang
     affiliation: 1
   - name: Francisco Bischoff
-    affiliation: 1, 2, 3
     orcid: 0000-0002-5301-8672
+    affiliation: 1, 2, 3
   - name: Tyler W. Marrs
     affiliation: 1
 affiliations:
