@@ -9,12 +9,13 @@ tags:
   - Data Science
 authors:
   - name: Andrew H. Van Benschoten
-    orcid: 
+    orcid: 0000-0002-7944-6237
     affiliation: 1
   - name: Austin Ouyang
     affiliation: 1
   - name: Francisco Bischoff
     affiliation: 1
+    orcid: 0000-0002-5301-8672
   - name: Tyler W. Marrs
     affiliation: 1
 affiliations:
