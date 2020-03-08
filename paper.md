@@ -45,6 +45,8 @@ As an example of the power of this methodology, `analyze` combines PMP with an u
 
 [code example]
 
+# Conclusion
+
 # Mathematics
 
 Single dollars ($) are required for inline mathematics e.g. $f(x) = e^{\pi/x}$
