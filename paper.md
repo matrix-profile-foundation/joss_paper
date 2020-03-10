@@ -56,6 +56,6 @@ As data footprints continue to expand, the need for more robust time series meth
 
 All authors contributed equally to this work.
 
-The authors would like to thank their fellow Matrix Foundation board members Jack Green and Frankie Cancino, as well as Eamonn Keogh, Abdullah Mueen and their numerous graduate students for creating the Matrix Profile and continuing to drive its development.
+The authors would like to thank their fellow Matrix Profile Foundation board members Jack Green and Frankie Cancino, as well as Eamonn Keogh, Abdullah Mueen and their numerous graduate students for creating the Matrix Profile and continuing to drive its development.
 
 # References
